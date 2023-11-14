@@ -28,6 +28,12 @@ int _printf(const char *format, ...)
 			format++;
 		}
 	}
+	if (*(format - 1) == '%')
+	{
+		_putchar('%');
+		charPrinted++;
+	}
+
 	va_end(args);
 	return (charPrinted);
 }
