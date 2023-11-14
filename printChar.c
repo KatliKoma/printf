@@ -11,7 +11,7 @@ int printf_char(va_list args, int printed)
 {
 	int charCount = va_args(args, int);
 
-	putchar(charCount);
+	_putchar(charCount);
 
 	return (printed + 1);
 }
