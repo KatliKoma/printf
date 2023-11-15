@@ -23,9 +23,9 @@ int processSpecifier(const char *format, va_list args, int charPrinted)
 	charPrinted++;
 		break;
 	default:
-		_putchar('%');
-		_putchar(*format);
-		charPrinted += 2;
+	_putchar('%');
+	_putchar(*format);
+	charPrinted += 2;
 		break;
 	}
 	return (charPrinted);
