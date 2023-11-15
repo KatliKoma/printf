@@ -21,17 +21,22 @@ int processSpecifier(const char *format, va_list args, int charPrinted)
 	case '%':
 	if (*(format + 1) == '%')
 	{
-		_putchar('%');
+		 _putchar('%');
 		charPrinted++;
 		format++;
 	}
 	else
 	{
-		_putchar('%');
+	       	_putchar('%');
 		_putchar(*format);
 		charPrinted += 2;
 	}
-	break;
+		break;
+	default:
+		_putchar('%');
+		_putchar(*format);
+		charPrinted += 2;
+		break;
 	}
 	return (charPrinted);
 }

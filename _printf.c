@@ -33,7 +33,6 @@ int _printf(const char *format, ...)
 		_putchar('%');
 		charPrinted++;
 	}
-
 	va_end(args);
 	return (charPrinted);
 }
