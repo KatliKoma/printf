@@ -19,23 +19,13 @@ int processSpecifier(const char *format, va_list args, int charPrinted)
 	charPrinted = printf_string(args, charPrinted);
 		break;
 	case '%':
-	if (*(format + 1) == '%')
-	{
-		 _putchar('%');
-		charPrinted++;
-		format++;
-	}
-	else
-	{
-	       	_putchar('%');
-		_putchar(*format);
-		charPrinted += 2;
-	}
+	_putchar('%');
+	charPrinted++;
 		break;
 	default:
-		_putchar('%');
-		_putchar(*format);
-		charPrinted += 2;
+	_putchar('%');
+	_putchar(*format);
+	charPrinted += 2;
 		break;
 	}
 	return (charPrinted);
