@@ -22,6 +22,10 @@ int processSpecifier(const char *format, va_list args, int charPrinted)
 	_putchar('%');
 	charPrinted++;
 		break;
+	case 'd':
+	case 'i':
+	charPrinted = printInteger(args, charPrinted);
+		break;
 	default:
 	_putchar('%');
 	_putchar(*format);
