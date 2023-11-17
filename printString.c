@@ -2,27 +2,17 @@
 #include <stdio.h>
 
 /**
- * printf_string - prints a string
- * @args: the arguments to use
- * @charPrinted: the printed characters
- * Return: printed characters
+ * printf_string - Print a string.
+ * @val: Argument.
+ * Return: The length of the string.
  */
-
-int printf_string(va_list args, int charPrinted)
+int printf_string(va_list val)
 {
-	char *str = va_arg(args, char *);
+	char *s = va_arg(val, char *);
+	int len = (s == NULL) ? _strlen("(null)") : _strlen(s);
 
-	if (str == NULL)
-	{
-		str = "(NULL)";
-	}
+	for (int i = 0; i < len; i++)
+		_putchar((s == NULL) ? "(null)"[i] : s[i]);
 
-	while (*str != '\0')
-	{
-		_putchar(*str);
-		charPrinted++;
-		str++;
-	}
-
-	return (charPrinted);
+	return (len);
 }

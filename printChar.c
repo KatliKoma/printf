@@ -1,18 +1,16 @@
 #include "main.h"
 
 /**
- * printChar- Outputs a single character to the standard output
- * @args: Variable arguments list
- * @charPrinted: The current count of characters printed
- * Return: The updated count of characters printed after processing
+ * printf_char - Prints a character.
+ * @val: Argument.
+ * Return: 1.
  */
 
-int printChar(va_list args, int charPrinted)
+int printf_char(va_list val)
 {
-	int charPrint = va_arg(args, int);
+	char s;
 
-	_putchar(charPrint);
-	charPrinted++;
-
-	return (charPrinted);
+	s = va_arg(val, int);
+	_putchar(s);
+	return (1);
 }
