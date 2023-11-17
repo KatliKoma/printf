@@ -15,7 +15,7 @@ int _printf(const char *format, ...)
 
 	while (*format != '\0')
 	{
-		if (*format == '%')
+		if (*format == '%' && *(format + 1) != '\0')
 		{
 			format++;
 			charPrinted = processSpecifier(format, args, charPrinted);
