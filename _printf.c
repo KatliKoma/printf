@@ -27,6 +27,8 @@ int _printf(const char *format, ...)
 			charPrinted++;
 			format++;
 		}
+		if (*format == '\0')
+			break;
 	}
 	va_end(args);
 	return (charPrinted);
