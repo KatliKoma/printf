@@ -4,6 +4,7 @@
  * _printf- Custom implementation of the printf function.
  * @format: A format string containing directives for printing.
  * Return: number of characters printed.
+ * _printf("Complete the sentence: You %s nothing, Jon Snow.\n", (char *)0);
  */
 int _printf(const char *format, ...)
 {
