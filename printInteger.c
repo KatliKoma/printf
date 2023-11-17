@@ -13,6 +13,7 @@ int printInteger(va_list args, int charPrinted)
 	char buffer[12];
 	int length = snprintf(buffer, sizeof(buffer), "%d", num);
 	int i;
+
 	if (length > 0)
 	{
 		for (i = 0; i < length; i++)
