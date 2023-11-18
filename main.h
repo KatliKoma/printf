@@ -3,6 +3,7 @@
 
 #include <stdarg.h>
 
+int count;
 int _printf(const char *format, ...);
 int _putchar(char c);
 int printf_string(va_list args, int charPrinted);
