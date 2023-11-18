@@ -6,7 +6,6 @@
  * @format: A format string containing directives for printing.
  * Return: number of characters printed.
  */
-int count = 0;
 
 int _printf(const char *format, ...)
 {
